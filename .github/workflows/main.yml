@@ -10,5 +10,5 @@ jobs:
         python-version: 3.10.5
     - uses: cryptic-wizard/run-behave-tests@v0.3.0
       with:
-        test-path: ..\github_ui_test
+        test-path: ../github_ui_test
         test-output-name: results.txt
