@@ -5,11 +5,13 @@ from models.base_page import BasePage
 from models.home_page import HomePage
 import time
 
-@given('the home page is open')
+@given('the home page "{home_url}" is open')
 @async_run_until_complete
-async def open_home_page(context):
+async def open_home_page(context, home_url: str):
     home_page = HomePage(context.page)
-    await home_page.navigate()
+    await home_page.navigate(home_url)
+    assert home_page.is_url_contains(home_url) == True
+
 
 @when('i click "{action}" tab on the home page')
 @async_run_until_complete
