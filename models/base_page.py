@@ -1,4 +1,4 @@
-from playwright.async_api import Page
+from playwright.async_api import Page, expect
 
 
 class BasePage:
@@ -11,10 +11,12 @@ class BasePage:
         if title.find(text) == -1:
             return False
         else:
+            expect(self.page).to_have_title(text)
             return True
 
     def is_url_contains(self, text) -> bool:
         if self.page.url.find(text) == -1:
             return False
         else:
+            expect(self.page).to_have_url(text)
             return True

@@ -9,3 +9,8 @@ UI tests using Behavior-driven development (BDD) framework with Playwright and p
 3. activate venv
 4. make install_win when running in Windows
 5. make test to execute
+
+**Results**
+
+![screenhsot](results/github_ui_results.jpg)
+~                                                
