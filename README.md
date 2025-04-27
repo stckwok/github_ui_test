@@ -2,6 +2,8 @@
 
 UI tests using Behavior-driven development (BDD) framework with Playwright and python
 
+Note: Github Action is used for implementing CI/CD workflows defined in .github/workflows/main.yml
+
 **Steps**
 
 1. clone repos
